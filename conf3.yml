@@ -29,7 +29,10 @@ services:
     restart: unless-stopped
 
   confluence:
-    image: atlassian/confluence-server:9.0.0-m30-ubuntu
+    image: atlassian/confluence-server:9.0.0-m30
+  build:
+  context: /home/rin4ik/confluence_project/ubuntu
+
     volumes:
       - confluence-data:/var/atlassian/application-data/confluence
     environment:
